@@ -1,11 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>LevelChange — Founder Story</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Found Story - LevelChange</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #000000;
+      color: #e5e7eb;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #000000;
+      border-left: 1px solid #1f1f1f;
+      border-right: 1px solid #1f1f1f;
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 768px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1024px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1280px;
+      }
+    }
+    button {
+      cursor: pointer;
+      border: none;
+    }
+    * {
+      transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .divider {
+      height: 1px;
+      background: #27272a;
+      margin: 2rem 0;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; padding: 40px; max-width: 600px; margin: auto;">
-<h1>LevelChange Founder Story </h1>
-  <p>This is a placeholder. The real story will be added soon.</p>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black border-b border-zinc-800 px-4 py-3 flex items-center justify-between">
+      <h1 class="text-xl font-bold uppercase">
+        <span>Level</span>
+        <span class="text-[#f49507]">Change</span>
+      </h1>
+      <nav class="flex gap-2">
+        <a href="/" class="px-3 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs hover:bg-zinc-800">
+          Home
+        </a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pb-24 text-zinc-100">
+      <!-- Page Header -->
+      <div class="px-4 py-6 border-b border-zinc-800">
+        <h2 class="text-2xl font-bold uppercase tracking-wide mb-2">
+          Found Story
+        </h2>
+        <p class="text-sm text-zinc-400">
+          The story behind LevelChange
+        </p>
+      </div>
+
+      <!-- Story Content -->
+      <div class="p-4 space-y-4">
+        <!-- About Me Card -->
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-100 mb-3 text-lg">About Me</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            I'm Eleza, a product leader who has spent over 20 years building software, apps, and digital experiences. (You can explore my professional background on LinkedIn.)
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            Alongside my career in tech, I've spent much of my life practicing martial arts:
+          </p>
+          <ul class="list-disc ml-5 text-sm text-zinc-400 space-y-1 mb-3">
+            <li>Black belt in Goju Ryu Karate</li>
+            <li>Several years of kickboxing</li>
+            <li>Early experience in BJJ</li>
+          </ul>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Training didn't make me a professional fighter, but it shaped how I see the sport - the discipline, repetition, conditioning, injuries, mental toughness, and quiet resilience that fighters live with every single day.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- What I'm Building Card -->
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-100 mb-3 text-lg">What I'm Building (and Why)</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            The deeper I train and follow combat sports, the more one reality stands out:
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3 font-semibold">
+            Fighters are being pushed to do more - far beyond training and competing.
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            To increase their earning potential, fighters today are expected to:
+          </p>
+          <ul class="list-disc ml-5 text-sm text-zinc-400 space-y-1 mb-3">
+            <li>build personal brands</li>
+            <li>produce constant content</li>
+            <li>sell merch</li>
+            <li>manage multiple platforms</li>
+            <li>maintain engagement to keep algorithms happy</li>
+          </ul>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            All of this sits on top of the demands of training, recovering, and staying competitive.
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            At the same time, die-hard fight fans want to support fighters - especially those who leave everything inside the cage but don't receive the financial upside.
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Yet there's still no simple, trusted, direct way for fans to financially support a fighter without friction or noise.
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mt-3 font-semibold text-[#f49507]">
+            This gap is the reason LevelChange exists.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- LevelChange Mission Card -->
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-100 mb-3 text-lg">LevelChange Mission</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            I'm building LevelChange to give fighters and fans a clean, direct line to each other.
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            LevelChange makes support simple:
+          </p>
+          <ul class="list-disc ml-5 text-sm text-zinc-400 space-y-1 mb-3">
+            <li>Direct financial support for fighters</li>
+            <li>Secure, instant tipping for fans</li>
+            <li>No subscriptions, no algorithms, no extra content required</li>
+          </ul>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3 italic">
+            Just appreciation → directly to the athlete.
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            At its core, LevelChange exists to:
+          </p>
+          <p class="text-sm text-zinc-400 leading-relaxed mt-2 font-semibold">
+            Help fighters focus on their craft - and help fans meaningfully support the fighters they believe in.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Why LevelChange Card -->
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-100 mb-3 text-lg">Why LevelChange</h3>
+          <ul class="list-disc ml-5 text-sm text-zinc-400 space-y-2">
+            <li>Because combat sports are built on discipline, heart, and grit - not follower counts.</li>
+            <li>Because fans already care and want to show appreciation.</li>
+            <li>Because fighters deserve more ways to earn without taking on more work.</li>
+            <li>Because no existing platform solves this cleanly.</li>
+          </ul>
+          <p class="text-sm text-zinc-400 leading-relaxed mt-4 font-semibold text-[#f49507]">
+            LevelChange is here to change that.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Building It Together Card -->
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-100 mb-3 text-lg">Building It Together</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            LevelChange is being shaped through real conversations with:
+          </p>
+          <ul class="list-disc ml-5 text-sm text-zinc-400 space-y-1 mb-4">
+            <li>Fighters</li>
+            <li>Gyms</li>
+            <li>Coaches</li>
+            <li>Fans</li>
+          </ul>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+            I want this platform built with the people who live and breathe the sport, not built in isolation.
+          </p>
+          <div class="mt-4 space-y-2">
+            <p class="text-sm text-zinc-300 font-semibold">Fighters deserve better.</p>
+            <p class="text-sm text-zinc-300 font-semibold">Fans want to give more.</p>
+            <p class="text-sm text-[#f49507] font-bold">LevelChange connects the two.</p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <a 
+          href="/" 
+          class="block w-full px-4 py-2 rounded-2xl bg-[#f49507] hover:bg-[#d48506] active:scale-[0.98] text-white font-semibold text-center transition mt-6"
+        >
+          Back to Home
+        </a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
