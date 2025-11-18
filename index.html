@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Found Story - LevelChange</title>
+  <title>Founder Story - LevelChange</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -48,21 +48,23 @@
       background: #27272a;
       margin: 2rem 0;
     }
+    a {
+      color: #f49507;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #d48506;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-black border-b border-zinc-800 px-4 py-3 flex items-center justify-between">
+    <header class="sticky top-0 z-50 bg-black border-b border-zinc-800 px-4 py-3">
       <h1 class="text-xl font-bold uppercase">
         <span>Level</span>
         <span class="text-[#f49507]">Change</span>
       </h1>
-      <nav class="flex gap-2">
-        <a href="/" class="px-3 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs hover:bg-zinc-800">
-          Home
-        </a>
-      </nav>
     </header>
 
     <!-- Main Content -->
@@ -70,7 +72,7 @@
       <!-- Page Header -->
       <div class="px-4 py-6 border-b border-zinc-800">
         <h2 class="text-2xl font-bold uppercase tracking-wide mb-2">
-          Found Story
+          Founder Story
         </h2>
         <p class="text-sm text-zinc-400">
           The story behind LevelChange
@@ -83,7 +85,7 @@
         <div class="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm">
           <h3 class="font-bold text-zinc-100 mb-3 text-lg">About Me</h3>
           <p class="text-sm text-zinc-400 leading-relaxed mb-3">
-            I'm Eleza, a product leader who has spent over 20 years building software, apps, and digital experiences. (You can explore my professional background on LinkedIn.)
+            I'm Eleza, a product leader who has spent over 20 years building software, apps, and digital experiences. (<a href="https://www.linkedin.com/in/eleza-mendoza-3025b022/" target="_blank" rel="noopener noreferrer">You can explore my professional background on LinkedIn</a>.)
           </p>
           <p class="text-sm text-zinc-400 leading-relaxed mb-3">
             Alongside my career in tech, I've spent much of my life practicing martial arts:
@@ -199,14 +201,6 @@
             <p class="text-sm text-[#f49507] font-bold">LevelChange connects the two.</p>
           </div>
         </div>
-
-        <!-- Call to Action -->
-        <a 
-          href="/" 
-          class="block w-full px-4 py-2 rounded-2xl bg-[#f49507] hover:bg-[#d48506] active:scale-[0.98] text-white font-semibold text-center transition mt-6"
-        >
-          Back to Home
-        </a>
       </div>
     </main>
   </div>
