@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LevelChange - User Research</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #fafafa;
+      color: #18181b;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #ffffff;
+      width: 100%;
+    }
+    /* Mobile first: optimize for 320px - 430px */
+    @media (min-width: 375px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+    @media (min-width: 430px) {
+      .container {
+        max-width: 430px;
+        border-left: 1px solid #e4e4e7;
+        border-right: 1px solid #e4e4e7;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 768px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1024px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1280px;
+      }
+    }
+    button {
+      cursor: pointer;
+      border: none;
+    }
+    * {
+      transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .divider {
+      height: 1px;
+      background: #e4e4e7;
+      margin: 1.5rem 0;
+    }
+    @media (min-width: 430px) {
+      .divider {
+        margin: 2rem 0;
+      }
+    }
+    a {
+      color: #f49507;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    a:hover {
+      color: #d48506;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #f49507;
+    }
+    /* Mobile-optimized image heights */
+    .hero-image-container {
+      height: 200px;
+    }
+    @media (min-width: 375px) {
+      .hero-image-container {
+        height: 240px;
+      }
+    }
+    @media (min-width: 430px) {
+      .hero-image-container {
+        height: 256px;
+      }
+    }
+    .content-image {
+      height: 280px;
+      max-width: 100%;
+      display: block;
+    }
+    @media (min-width: 375px) {
+      .content-image {
+        height: 320px;
+      }
+    }
+    @media (min-width: 430px) {
+      .content-image {
+        height: 400px;
+      }
+    }
+    @media (min-width: 768px) {
+      .content-image {
+        height: 500px;
+      }
+    }
+    /* Prevent horizontal scroll on mobile */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-zinc-200 px-4 py-2.5 shadow-sm">
+      <h1 class="text-lg font-bold uppercase sm:text-xl text-zinc-900">
+        <span>Level</span><span class="text-[#f49507]">Change</span>
+      </h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pb-16 sm:pb-24 text-zinc-900">
+      <!-- Hero Image Section -->
+      <div class="relative w-full hero-image-container bg-gradient-to-br from-zinc-900 to-zinc-800 border-b border-zinc-200 overflow-hidden">
+        <img 
+          src="heavybag.jpg" 
+          alt="Combat sports hero image" 
+          class="w-full h-full object-cover opacity-90"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+          <h2 class="text-2xl sm:text-3xl font-bold uppercase tracking-wide mb-2 text-white drop-shadow-lg">
+            LevelChange
+          </h2>
+          <p class="text-base sm:text-lg text-white font-semibold mb-3 sm:mb-4 drop-shadow-md">
+            Support Fighters. Directly. Instantly. Authentically.
+          </p>
+          <a 
+            href="https://calendar.app.google/mTx1G7RTMZm7R8Jq7" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl bg-[#f49507] hover:bg-[#d48506] active:scale-[0.98] text-white font-semibold transition text-sm sm:text-base text-center no-underline min-h-[44px] flex items-center justify-center shadow-lg"
+            style="color: white; text-decoration: none;"
+          >
+            Participate in Research
+          </a>
+        </div>
+      </div>
+
+      <!-- Story Content -->
+      <div class="p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50">
+        <!-- Value Proposition Card -->
+        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
+          <p class="text-sm text-zinc-700 leading-relaxed mb-3">
+            LevelChange lets fans send secure, direct financial support to fighters — no subscriptions, no content requirements, no noise.
+          </p>
+          <p class="text-sm text-zinc-800 leading-relaxed font-semibold">
+            Built for fighters. Backed by fans. Made for the sport.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- What LevelChange Is Card -->
+        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">What LevelChange Is</h3>
+          <p class="text-sm text-zinc-700 leading-relaxed mb-3">
+            A simple, secure tipping platform for combat sports.
+          </p>
+          <p class="text-sm text-zinc-700 leading-relaxed mb-3">
+            LevelChange creates a clean, direct way for fans to support fighters — quickly and meaningfully.
+          </p>
+          <ul class="list-disc ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
+            <li>Direct financial support for fighters</li>
+            <li>Quick, secure tipping for fans</li>
+            <li>No algorithms or extra content</li>
+            <li>Built specifically for martial artists and combat sports</li>
+          </ul>
+          <p class="text-sm text-zinc-700 leading-relaxed italic">
+            This is appreciation → directly to the athlete.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- How It Works for Fighters -->
+        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">How It Works for <span class="text-[#f49507]">Fighters</span></h3>
+          <ol class="list-decimal ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
+            <li>Create your LevelChange profile</li>
+            <li>Verify your payout account</li>
+            <li>Share your link to receive tips instantly</li>
+          </ol>
+          
+          <p class="text-xs text-zinc-600 italic mb-4 sm:mb-6">
+            Fighters receive 100% of tips. Low fees are covered by fans. Payments are processed through Stripe for security, compliance and fraud protection.
+          </p>
+          
+          <div class="rounded-lg overflow-hidden border border-zinc-200 bg-gray-100 shadow-md">
+            <img 
+              src="fighter_profile.png" 
+              alt="LevelChange fighter profile concept" 
+              class="w-full content-image object-cover object-top"
+            />
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- How It Works for Fans -->
+        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">How It Works for <span class="text-[#f49507]">Fans</span></h3>
+          <ol class="list-decimal ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
+            <li>Search for fighters or use a link/QR</li>
+            <li>Choose an amount</li>
+            <li>Support your fighter instantly</li>
+          </ol>
+          
+          <p class="text-xs text-zinc-600 italic mb-4 sm:mb-6">
+            Low fees are added to the tip to cover secure payment processing and platform maintenance. Payments are processed through Stripe for security, compliance and fraud protection.
+          </p>
+          
+          <div class="rounded-lg overflow-hidden border border-zinc-200 bg-gray-100 shadow-md mb-4">
+            <img 
+              src="fan_tipping.png" 
+              alt="LevelChange fan tipping concept" 
+              class="w-full content-image object-cover object-top"
+            />
+          </div>
+          
+          <p class="text-sm text-zinc-800 leading-relaxed font-semibold">
+            Simple. Secure. Direct.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Call to Action Card - Prominent -->
+        <div class="rounded-xl sm:rounded-2xl border-2 border-[#f49507] bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 shadow-lg">
+          <h3 class="font-bold text-zinc-900 mb-3 text-lg sm:text-xl">Participate in User Research</h3>
+          <p class="text-sm text-zinc-700 leading-relaxed mb-4 sm:mb-6">
+            Whether you're a fighter, a coach, a gym, or a fan, we'd love your feedback. Share your thoughts and help shape LevelChange through user research sessions.
+          </p>
+          <a 
+            href="https://calendar.app.google/mTx1G7RTMZm7R8Jq7" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block w-full px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl bg-[#f49507] hover:bg-[#d48506] active:scale-[0.98] text-white font-semibold transition text-sm sm:text-base text-center no-underline min-h-[44px] flex items-center justify-center shadow-md"
+            style="color: white; text-decoration: none;"
+          >
+            Participate in Research
+          </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Mission Card -->
+        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
+          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">Mission</h3>
+          <p class="text-sm text-zinc-700 leading-relaxed mb-3">
+            Our mission is to help fighters reach their full potential through direct fan support.
+          </p>
+          <p class="text-sm text-zinc-700 leading-relaxed mb-4">
+            LevelChange gives fighters another path — a way to earn without extra work, and a way for fans to support what matters most: the athlete's craft, discipline, and performance.
+          </p>
+          
+          <div class="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-zinc-200">
+            <h4 class="font-bold text-zinc-900 mb-3 text-sm sm:text-base">Founder</h4>
+            <p class="text-sm text-zinc-700 leading-relaxed mb-3">
+              I'm <a href="https://www.linkedin.com/in/eleza-mendoza-3025b022/" target="_blank" rel="noopener noreferrer" class="text-[#f49507] underline font-medium hover:text-[#d48506]">Eleza, a product leader</a> who has spent over 20 years building software, apps, and digital experiences.
+            </p>
+            <p class="text-sm text-zinc-700 leading-relaxed mb-3">
+              Alongside my career in tech, I'm a dedicated martial arts practitioner holding a black belt in Goju Ryu Karate, several years of experience in kickboxing and an early student in BJJ. Through my own practice and decades of watching combat sports I've grown a deep respect for the discipline, resilience, and heart fighters bring to their craft.
+            </p>
+            <p class="text-sm text-zinc-700 leading-relaxed">
+              LevelChange is here to elevate martial arts by empowering fighters and the fans who believe in them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 bg-white px-3 sm:px-4 py-4 sm:py-6 text-center">
+      <p class="text-xs text-zinc-500">LevelChange 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
 
