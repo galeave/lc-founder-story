@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,13 +109,78 @@
     }
     @media (min-width: 768px) {
       .content-image {
-        height: 500px;
+        height: 600px;
       }
     }
     /* Prevent horizontal scroll on mobile */
     img {
       max-width: 100%;
       height: auto;
+    }
+    /* How It Works card alignment and image positioning */
+    @media (min-width: 768px) {
+      .how-it-works-card {
+        position: relative;
+        min-height: 850px;
+      }
+      /* Ensure content above images has proper spacing and doesn't overlap */
+      .how-it-works-card > *:not(.how-it-works-image) {
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+      }
+      /* Set consistent top position for images - aligns them at same vertical position */
+      .how-it-works-image {
+        position: absolute;
+        top: 200px;
+        left: 0.875rem;
+        right: 0.875rem;
+        width: calc(100% - 1.75rem);
+        margin: 0;
+        z-index: 0;
+      }
+      /* Position text after image in Fans section */
+      .how-it-works-card > p:last-child {
+        position: absolute;
+        top: 820px;
+        left: 0.875rem;
+        right: 0.875rem;
+        width: calc(100% - 1.75rem);
+        margin: 0;
+        z-index: 1;
+      }
+    }
+    /* Prevent image edge cropping */
+    .how-it-works-image {
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .how-it-works-image img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    /* Prevent edge cropping on narrow desktop screens - add padding to container */
+    @media (min-width: 430px) and (max-width: 767px) {
+      .how-it-works-card {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .how-it-works-image {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        width: calc(100% + 1rem);
+      }
+    }
+    @media (min-width: 768px) {
+      .how-it-works-image {
+        margin-left: 0;
+        margin-right: 0;
+        width: calc(100% - 1.75rem);
+      }
     }
   </style>
 </head>
@@ -174,7 +238,7 @@
 
         <!-- What LevelChange Is Card -->
         <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
-          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">What Is LevelChange?</h3>
+          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">What LevelChange Is</h3>
           <p class="text-sm text-zinc-700 leading-relaxed mb-3">
             A simple, secure tipping platform for combat sports.
           </p>
@@ -194,54 +258,57 @@
 
         <div class="divider"></div>
 
-        <!-- How It Works for Fighters -->
-        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
-          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">How It Works for <span class="text-[#f49507]">Fighters</span></h3>
-          <ol class="list-decimal ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
-            <li>Create your LevelChange profile</li>
-            <li>Verify your payout account</li>
-            <li>Promote your QR code or link - receive tips instantly!</li>
-          </ol>
-          
-          <p class="text-xs text-zinc-600 italic mb-4 sm:mb-6">
-            Fighters receive 100% of tips. Low fees are covered by fans. Payments are processed through Stripe for security, compliance and fraud protection.
-          </p>
-          
-          <div class="rounded-lg overflow-hidden border border-zinc-200 bg-gray-100 shadow-md">
-            <img 
-              src="fighter_profile.png" 
-              alt="LevelChange fighter profile concept" 
-              class="w-full content-image object-cover object-top"
-            />
-          </div>
-        </div>
+        <!-- How It Works Container - Two Column on Desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 md:items-start">
+          <!-- How It Works for Fighters -->
+          <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm how-it-works-card">
+            <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">How It Works for <span class="text-[#f49507]">Fighters</span></h3>
+            <ol class="list-decimal ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
+              <li>Create your LevelChange profile</li>
+              <li>Verify your payout account</li>
+              <li>Auto-generate your QR code and share it</li>
+              <li>Get tips instantly!</li>
 
-        <div class="divider"></div>
-
-        <!-- How It Works for Fans -->
-        <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm">
-          <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">How It Works for <span class="text-[#f49507]">Fans</span></h3>
-          <ol class="list-decimal ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
-            <li>Search for fighters or use a link/QR</li>
-            <li>Choose an amount</li>
-            <li>Support your fighter instantly</li>
-          </ol>
-          
-          <p class="text-xs text-zinc-600 italic mb-4 sm:mb-6">
-            Low fees are added to the tip to cover secure payment processing and platform maintenance. Payments are processed through Stripe for security, compliance and fraud protection.
-          </p>
-          
-          <div class="rounded-lg overflow-hidden border border-zinc-200 bg-gray-100 shadow-md mb-4">
-            <img 
-              src="fan_tipping.png" 
-              alt="LevelChange fan tipping concept" 
-              class="w-full content-image object-cover object-top"
-            />
+            </ol>
+            
+            <p class="text-xs text-zinc-600 italic mb-4 sm:mb-6">
+              Fighters receive 100% of tips. Low fees are covered by fans. Payments are processed through Stripe for security, compliance and fraud protection.
+            </p>
+            
+            <div class="rounded-lg overflow-hidden border border-zinc-200 bg-gray-100 shadow-md how-it-works-image">
+              <img 
+                src="fighter_profile.png" 
+                alt="LevelChange fighter profile concept" 
+                class="w-full content-image object-cover object-top"
+              />
+            </div>
           </div>
-          
-          <p class="text-sm text-zinc-800 leading-relaxed font-semibold">
-            Simple. Secure. Direct.
-          </p>
+
+          <!-- How It Works for Fans -->
+          <div class="rounded-xl sm:rounded-2xl border border-zinc-200 bg-white p-3.5 sm:p-4 shadow-sm how-it-works-card">
+            <h3 class="font-bold text-zinc-900 mb-3 text-base sm:text-lg">How It Works for <span class="text-[#f49507]">Fans</span></h3>
+            <ol class="list-decimal ml-4 sm:ml-5 text-sm text-zinc-700 space-y-1 mb-3">
+              <li>Search for fighters or use a link/QR</li>
+              <li>Choose an amount</li>
+              <li>Support your fighter instantly</li>
+            </ol>
+            
+            <p class="text-xs text-zinc-600 italic mb-4 sm:mb-6">
+              Low fees are added to the tip to cover secure payment processing and platform maintenance. Payments are processed through Stripe for security, compliance and fraud protection.
+            </p>
+            
+            <div class="rounded-lg overflow-hidden border border-zinc-200 bg-gray-100 shadow-md mb-4 how-it-works-image">
+              <img 
+                src="fan_tipping.png" 
+                alt="LevelChange fan tipping concept" 
+                class="w-full content-image object-cover object-top"
+              />
+            </div>
+            
+            <p class="text-sm text-zinc-800 leading-relaxed font-semibold">
+              Simple. Secure. Direct.
+            </p>
+          </div>
         </div>
 
         <div class="divider"></div>
@@ -293,7 +360,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-zinc-200 bg-white px-3 sm:px-4 py-4 sm:py-6 text-center">
-      <p class="text-xs text-zinc-500">&copy; 2025 LevelChange. All Rights Reserved.</p>
+        <p class="text-xs text-zinc-500">&copy; 2025 LevelChange. All Rights Reserved.</p>
     </footer>
   </div>
 </body>
